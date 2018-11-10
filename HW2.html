@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="HW2_CSS.css"/>
+    <script>  
+function func() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('inp');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("UL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+    
+</script>
+  </head>
+  
+<body>
+  <input type="text" id="inp" onkeyup="func()" placeholder="Search for names...">
+ 
+  <div class= "container">
+  <div class= "box1">
+    <h1>
+      <font size= "3"> Students Found: </font>
+    </h1>
+  <ul id="UL">
+    <li><a><button id="myBtn1">Adele Chan</button></a></li>
+  <li><a> <button id="myBtn2">Lillie Smith</button></a></li>
+  <li><a><button id="myBtn3">Bobby Chan</button></a></li>
+  <li><a><button id="myBtn4">Judy Smith</button></a></li>
+</ul>
+   
+    </div>
+    
+    <div class= "box2">
+      <h2>
+        <font size="3"> Grades for:</font>
+        <p id="result1"></p>
+     <script>
+       var p1 = "Adele Chan - MATH 340: B+"; 
+  document.getElementById("myBtn1").addEventListener("click", function(){
+        grades(p1);
+      });
+      
+      function grades(a){
+        var result = a;
+        document.getElementById("result1").innerHTML = result;
+      }
+  </script>
+      <p id="result2"></p>
+            <script>
+              var p2 = "Lillie Smith - SOCI 340: A, ENG 401: C+";
+  document.getElementById("myBtn2").addEventListener("click", function(){
+        grades(p2);
+      });
+      
+      function grades(b){
+        var result = b;
+        document.getElementById("result2").innerHTML = result;
+      }
+  </script> 
+      <p id="result3"></p>
+            <script>
+              var p3 = "Bobby Chan - CPSC 310: B-, HUSR 341: C+";
+  document.getElementById("myBtn3").addEventListener("click", function(){
+        grades(p3);
+      });
+      
+      function grades(c){
+        var result = c;
+        document.getElementById("result3").innerHTML = result;
+      }
+  </script> 
+      <p id="result4"></p>
+   <script>
+     var p4 = "Judy Smith - ECON 352: B-, CPSC 372: C, ECON 440: A+";
+  document.getElementById("myBtn4").addEventListener("click", function(){
+        grades(p4);
+      });
+      
+      function grades(d){
+        var result = d;
+        document.getElementById("result4").innerHTML = result;
+      }
+  </script>
+      </h2>
+    </div>
+  </div>
+</body>
+</html>

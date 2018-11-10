@@ -1,0 +1,43 @@
+#inp {
+    width: 100%;
+    font-size: 18px;
+    padding: 8px 20px 8px 10px;
+    border: 1px solid #ddd; /* Add a grey border */
+}
+
+#UL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#UL li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 16px; 
+    color: black; 
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#UL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+.container {
+  display: flex;
+}
+
+.box1{
+  box-sizing: border-box;
+      width: 50%;
+    border: 1px solid black;
+}
+
+.box2 {
+  box-sizing: border-box;
+  width: 50%;
+  border: 1px solid black;
+}
